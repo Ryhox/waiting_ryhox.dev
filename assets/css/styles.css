@@ -100,3 +100,122 @@
     transform: scale(1.05)  translateY(-1px);
     cursor: help;
   }
+
+
+/* Add these styles to your existing styles.css file */
+
+.logoSmall, .textTitle {
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    font-size: 2rem;
+}
+.logoSmall {
+    font-size: 3rem;
+
+}
+.logoSmall:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    text-shadow: 0 0 16px rgba(255, 255, 255, 0.6);
+}
+
+.text {
+    max-width: 800px;
+    background: rgba(30, 31, 37, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    text-align: left;
+    color: rgba(255, 255, 255, 0.85);
+    overflow-y: auto;
+    max-height: 60vh;
+}
+
+.text h2 {
+    color: rgba(255, 255, 255, 0.95);
+    margin: 1.5rem 0 0.8rem 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+}
+
+.text p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.text ul {
+    margin: 0.8rem 0 1.5rem 1.5rem;
+}
+
+.text li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+/* Scrollbar styling for the text container */
+.text::-webkit-scrollbar {
+    width: 8px;
+}
+
+.text::-webkit-scrollbar-track {
+    background: rgba(30, 31, 37, 0.5);
+    border-radius: 4px;
+}
+
+.text::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.text::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .text {
+        padding: 1.5rem;
+        margin: 1rem;
+        max-height: 70vh;
+    }
+    
+    .text h2 {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+  a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #b4b4b4b2;
+  }
+
+    footer {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #fcfafb;
+    z-index: 1000;
+    user-select: none;
+    }  
+
+
