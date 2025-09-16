@@ -1,0 +1,102 @@
+ * {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+  }
+  
+  html, body {
+     height:100%;
+    font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    overflow:hidden; 
+  }
+
+  body {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: linear-gradient(270deg, #1e1f25, #26272e, #1e1f25);
+    background-size: 600% 600%;
+    animation: gradientBG 15s ease infinite;
+    position: relative;
+  }
+
+
+.grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: 
+        linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 1;
+}
+
+#countdown {
+    margin-top: 20px; 
+    font-size: clamp(1.5rem, 2vw, 2rem); 
+    color: #ffffffb0; 
+    font-weight: 700;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    width: fit-content;
+    padding: 15px 30px;
+    display: inline-block;
+    transition: ease-in-out 0.2s;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    z-index: 2;
+}
+
+.logo {
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    font-size: clamp(2.25rem, 12vw, 7.5rem);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-stroke: 2px rgba(255,255,255,0.8);
+    text-shadow:
+      0 0 8px rgba(255,255,255,0.4),
+      0 0 16px rgba(255,255,255,0.2),
+      0 0 24px rgba(255,255,255,0.1);
+    transition: transform 0.45s cubic-bezier(.2,.9,.2,1), text-shadow 0.35s;
+    animation: textGradient 4s ease infinite;
+    
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+
+  .logo:hover {
+    transform: scale(1.08) rotateZ(1deg) translateY(-6px);
+    text-shadow:
+      0 0 16px rgba(255,255,255,0.6),
+      0 0 32px rgba(255, 255, 255, 0.027),
+      0 0 48px rgba(255, 255, 255, 0.021);
+  }
+    #countdown:hover {
+    transform: scale(1.05)  translateY(-1px);
+    cursor: help;
+  }
